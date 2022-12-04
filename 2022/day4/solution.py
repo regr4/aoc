@@ -1,6 +1,6 @@
 """day 4"""
 
-with open("input") as f:
+with open("input2") as f:
     input = f.read()
 
 import re

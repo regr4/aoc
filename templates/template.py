@@ -4,7 +4,7 @@
 import re
 
 with open("input") as f:
-    input = f.read()
+    inp = f.read()
 
 # part 1
 print(f"part 1: {None}")

@@ -20,7 +20,7 @@ def init_dir(year: int, day: int) -> Tuple[Path, bool]:
     return directory, True
 
 
-def download_input(year: int, day: int, user: str, directory: os.PathLike) -> None:
+def download_input(year: int, day: int, user: str, directory: Path) -> None:
     """downloads input for day and year from user"""
     url = f"https://adventofcode.com/{year}/day/{day}/input"
     cookie = secret.users[user]

@@ -26,7 +26,7 @@ def download_input(year: int, day: int, user: str, directory: Path) -> None:
     """downloads input for day and year from user"""
     url = f"https://adventofcode.com/{year}/day/{day}/input"
     cookie = secret.users[user]
-    headers = {"Cookie": cookie}
+    headers = {"Cookie": cookie, "User-Agent": "AOC helper script by https://github.com/regr4."}
     with requests.get(url, timeout=10, headers=headers) as res:
         # TODO: error handling
         input_file = directory / "input"

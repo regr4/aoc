@@ -9,5 +9,5 @@ with open("input") as f:
 # part 1
 print(f"part 1: {None}")
 
-#part 2
+# part 2
 print(f"part 2: {None}")

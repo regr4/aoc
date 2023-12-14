@@ -18,13 +18,11 @@ distances = ints(inp[1])
 races = list(zip(times, distances))
 
 res = 1
-for race in races:
+for t, d in races:
     wtw = 0
-    t, d = race
     for i in range(t):
         if i * (t - i) > d:
             wtw += 1
-
     res *= wtw
 
 print(f"part 1: {res}")
@@ -32,11 +30,9 @@ print(f"part 1: {res}")
 # part 2
 
 # Bruteforce, but if it runs in a few seconds I'm satisfied.
-newtime = int("".join(filter(str.isdigit, inp[0])))
-newdistance = int("".join(filter(str.isdigit, inp[1])))
-
+t = int("".join(filter(str.isdigit, inp[0])))
+d = int("".join(filter(str.isdigit, inp[1])))
 wtw = 0
-t, d = newtime, newdistance
 for i in range(t):
     if i * (t - i) > d:
         wtw += 1

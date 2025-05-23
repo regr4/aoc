@@ -5,7 +5,7 @@ Inp        ← ⊜≡⋕⊸≠@\n &fras "input"
 Trailheads ← ⊚=0 Inp
 Trailheads
 
-Step ← ▽=⊃(≡⬚¯1⊡:¤Inp|⋅(+1⊡:Inp)|⊙◌) +[1_0 ¯1_0 0_1 0_¯1] ¤.
+Step ← ▽=⊃(≡⬚¯1⊡:¤Inp|⋅(+1⊡:Inp)|⊙◌) +A₂ ¤.
 Goal ← =9⬚0˜⊡Inp
 
 /+≡(⧻◴≡⊣path(Step)(Goal))

@@ -1,15 +1,14 @@
 IsDigit    ← ↧⊃(≤ @9) (≥ @0)
 GetNumbers ← ⊜⋕ ⊸IsDigit
-
-Inp ← ⊜(□GetNumbers)≠@\n. &fras "input"
+Inp        ← ⊜(□GetNumbers)≠@\n. &fras "input"
 
 Inp
 /+≡◇(×⊸∊∧(⊂⊃+×):¤°⊂:°⊂)
-$"Part 1: _"
-&p
+&p $"Part 1: _"
 
-Concat ← ⋕⊂∩°⋕
+NDig   ← +1↥0⌊ₙ10
+Concat ← +⊃(×⊙(ⁿ:10 NDig)|⋅∘)
+
 Inp
 /+≡◇(×⊸∊∧(⊂⊂⊃(+|×|≡Concat:¤)):¤°⊂:°⊂)
-$"Part 2: _"
-&p
+&p $"Part 2: _"

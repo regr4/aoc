@@ -1,12 +1,10 @@
-IsDigit ← ↧⊃(≤ @9) (≥ @0)
-
+IsDigit    ← ↧⊃(≤ @9) (≥ @0)
 GetNumbers ← ⊜⋕ ⊸IsDigit
-
-Inp ← °⊟⊜□¬⌕"\n\n". &fras "input"
+Inp        ← °⊟⊜□¬⌕"\n\n". &fras "input"
 
 Rules        ← ↯∞_2 ◇GetNumbers ⊙◌ Inp
 PagesNeeded  ← ⊜(□ GetNumbers)⊸≠@\n °□◌ Inp
-IsCorrect    ← ¬/↥≡(∊)¤Rules ⧅>2
+IsCorrect    ← /×⧈(∊Rules)2 # change to windows
 Middle       ← ⊡⌊÷2⊸⧻
 CorrectPages ← ▽⊸≡◇IsCorrect PagesNeeded
 
@@ -16,7 +14,7 @@ $"Part 1: _"
 
 IncorrectPages          ← ▽⊸≡◇(¬IsCorrect) PagesNeeded
 Ordering                ← ∊Rules⊟:
-IncorrectPagesReordered ← ≡⍜°□(⊏⍏≡/+⊸(⊞Ordering.)) IncorrectPages
+IncorrectPagesReordered ← ⍚(⊏⍏≡/+⊸⊞Ordering.) IncorrectPages
 /+≡◇Middle IncorrectPagesReordered
 $"Part 2: _"
 &p

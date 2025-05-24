@@ -1,22 +1,17 @@
-IsDigit ← ↧⊃(≤ @9) (≥ @0)
-
+IsDigit    ← ↧⊃(≤ @9) (≥ @0)
 GetNumbers ← ⊜⋕ ⊸IsDigit
+Inp        ← ⊜∘≠ @\n.&fras "input"
 
-Inp ← ⊜∘≠ @\n.&fras "input"
-
-GetXMAS ← /+≡(/+⌕ "XMAS")
-
+GetXMAS    ← /+≡(/+⌕ "XMAS")
 Horizontal ← +∩GetXMAS ≡⇌.
 Vertical   ← Horizontal ⍉
-Diagonal₁  ← Vertical≡↻⇡⊸⧻≡(˜⊂↯¤⊙"-")⊸⧻
+Diagonal₁  ← Vertical ≡↻°⊏≡(˜⊂˜↯@-⧻.)
 Diagonal₂  ← Diagonal₁ ≡⇌
 
 +++ ⊃(Diagonal₂|Diagonal₁|Vertical|Horizontal) Inp
-$"Part 1: _"
-&p
+&p $"Part 1: _"
 
-IsXMas ← /↥≡≍["MMASS" "MSAMS" "SMASM" "SSAMM"] ¤ ⊏0_2_4_6_8 ♭
+IsXMas ← /↥≡≍["MMASS" "MSAMS" "SMASM" "SSAMM"] ¤ ⊏×2⇡5 ♭
 
 /+♭⧈IsXMas 3_3 Inp
-$"Part 2: _"
-&p
+&p $"Part 2: _"

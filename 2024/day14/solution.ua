@@ -1,17 +1,14 @@
 IsDigitOrMinus ← ↥↧⊃(≤ @9|≥ @0|=@-|)
 GetNumbers     ← ⊜⋕ ⊸IsDigitOrMinus
+Inp            ← memo(≡⊃↙₂↘₂⊜GetNumbers≠@\n .&fras "input")
 
-Inp           ← memo(≡⊃↙₂↘₂⊜GetNumbers≠@\n .&fras "input")
 WH            ← 101_103
 Middle        ← ⌊÷2 WH
 RunSimulation ← ◿¤WH+ ⊃(⋅∘|×⊙⋅∘)
 
-Inp
-RunSimulation 100
-▽≡/↧≠0.±-¤Middle
-/×≡/+⊞≍C₂
-$"Part 1: _"
-&p
+RunSimulation 100 Inp
+/×≡/+⊞≍C₂ ±-¤Middle
+&p $"Part 1: _"
 
 NNDist ← ⍜▽(+0.1)=0./↧+⊃(⊞(/↥⌵-).|⍜♭(⍜▽⋅∞.)⊞=.⇡⧻)
 Avg    ← ÷⧻⟜/+

@@ -1,11 +1,9 @@
 IsDigit    ← ↧⊃(≤ @9) (≥ @0)
 GetNumbers ← ⊜⋕ ⊸IsDigit
-Inp        ← °⊟⍉↯ ∞_2 GetNumbers &fras "input"
+Inp        ← ↯∞_2 GetNumbers &fras "input"
 
-Inp
-/+⌵-∩⍆
+/+⌵/-≡⍆⍉Inp
 &p $"Part 1: _"
 
-Inp
-/+×⤚≡(/+=)⊙¤
+/+×⟜(≡/+⊞=)°⊟⍉Inp
 &p $"Part 2: _"

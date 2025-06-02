@@ -18,7 +18,8 @@ def init_dir(year: int, day: int) -> Tuple[Path, bool]:
     if os.path.exists(directory): # already exists
         return directory, False
     directory.mkdir(parents=True)
-    shutil.copy("templates/template.py", directory / "solution.py")
+    # shutil.copy("templates/template.py", directory / "solution.py")
+    shutil.copy("templates/template.ua", directory / "solution.ua")
     return directory, True
 
 

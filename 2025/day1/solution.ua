@@ -1,0 +1,10 @@
+IsDigit    ← ↧⊃(≤ @9) (≥ @0)
+GetNumbers ← ⊜⋕ ⊸IsDigit
+
+Inp ← ≡(×⊓(-1×2=@R|⋕)◇°⊂) ⊜□⊸≠@\n &fras "input"
+
+/+=0 ◿100 \+ ⊂50 Inp
+&p $"Part 1: _"
+
+/+=0 ◿100 \+ ± ▽⊸⌵ ⊂50 Inp
+&p $"Part 2: _"

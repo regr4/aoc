@@ -3,3 +3,5 @@
 /**/test*
 /**/secret.py
 /**/target
+/**/*.hi
+/**/*.o

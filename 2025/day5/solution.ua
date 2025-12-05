@@ -5,12 +5,15 @@ Inp ← ∩°□ °⊟ ⊜□⊸(¬⌕"\n\n") &fras "input"
 # Freshness ranges
 FR ← ↯ ∞_2 GetNumbers ⊙◌ Inp
 # Ingredients
-I ← GetNumbers ◌Inp
+I ← GetNumbers ◌ Inp
 # In range?
 IR ← /×≥0 ⍜⊣¯ -
 
-# &p $"Part 1: _" /+/↥⊞IR FR I
+# range, list of ranges -> updated list
+M ← ⨬(˜⊂|⍜⊙(⊣⊣)↥⊣) ⊃(≥⊓⊢⊣⊙⊣|⊙∘)
 
-⊏⍏⊸≡⊢ FR
+# deduplicated freshness ranges
+DFR ← ∧M ⟜[⊢] ⊏⍏⊸≡⊢ FR
 
-# &p $"Part 2: _"
+&p $"Part 1: _" /+/↥⊞IR DFR I
+&p $"Part 2: _" /+≡+₁≡/- DFR

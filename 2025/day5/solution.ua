@@ -13,7 +13,7 @@ IR ← /×≥0 ⍜⊣¯ -
 M ← ⨬(˜⊂|⍜⊙(⊣⊣)↥⊣) ⊃(≥⊓⊢⊣⊙⊣|⊙∘)
 
 # deduplicated freshness ranges
-DFR ← ∧M ⟜[⊢] ⊏⍏⊸≡⊢ FR
+DFR ← ∧M ⟜[⊢] ⍆ FR
 
 &p $"Part 1: _" /+/↥⊞IR DFR I
-&p $"Part 2: _" /+≡+₁≡/- DFR
+&p $"Part 2: _" /++₁≡/- DFR

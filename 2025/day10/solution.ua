@@ -17,13 +17,17 @@ Inp
 
 &p $"Part 1: _"
 
-# Inp
+S ← -⊙¤×⊙¤◡(⇡/↧▽) :⊙∘
 
-# °□⊢
-# ↘1
-# ⊃↙↘ ¯1
-# ⊓(◇GetNumbers°¤|⍚GetNumbers)
-# ⟜ParseButtons
+Inp
+°□⊢
+↘1
+⊃↙↘ ¯1
+⊓(◇GetNumbers°¤|⍚GetNumbers)
+⟜ParseButtons
+
+⊙°⊂
+S
 
 # /+
 # &p $"Part 2: _"

@@ -1,5 +1,5 @@
-IsAlpha ← ↧⊃(≤ @z|≥ @a)
-Inp     ← ⊜(□⊜∘ ⊸IsAlpha)⊸≠@\n &fras "input" # id since all labels are 3 letters
+IsAlpha ← ×⊃(≤@z|≥@a)
+Inp     ← ⊜(□⊜∘⊸IsAlpha)⊸≠@\n &fras "input" # id since all labels are 3 letters
 
 GM ← map ≡(⊙□◇°⊂)
 NN ← ⊸(˜↯0 ⧻) °□⬚[]get # costs: all 0

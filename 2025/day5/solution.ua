@@ -1,5 +1,5 @@
-IsDigit    ← ↧⊃(≤ @9) (≥ @0)
-GetNumbers ← ⊜⋕ ⊸IsDigit
+IsDigit    ← ×⊃(≤@9|≥@0)
+GetNumbers ← ⊜⋕⊸IsDigit
 
 Inp ← ∩°□ °⊟ ⊜□⊸(¬⌕"\n\n") &fras "input"
 # Freshness ranges

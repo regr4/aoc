@@ -1,6 +1,3 @@
-IsDigit    ← ↧⊃(≤ @9) (≥ @0)
-GetNumbers ← ⊜⋕ ⊸IsDigit
-
 Inp ← ≡(×⊓(-1×2=@R|⋕)◇°⊂) ⊜□⊸≠@\n &fras "input"
 
 /+=0 ◿100 \+ ⊂50 Inp

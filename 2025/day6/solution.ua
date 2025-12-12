@@ -1,4 +1,4 @@
-IsDigit    ← ↧⊃(≤ @9|≥ @0)
+IsDigit    ← ×⊃(≤@9|≥@0)
 GetNumbers ← ⊜⋕⊸IsDigit
 GetOp      ← ▽⊸∊"*+"
 

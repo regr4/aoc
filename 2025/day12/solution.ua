@@ -1,6 +1,6 @@
 # Experimental!
-IsDigit    ← ↧⊃(≤ @9|≥ @0)
-GetNumbers ← ⊜⋕ ⊸IsDigit
+IsDigit    ← ×⊃(≤@9|≥@0)
+GetNumbers ← ⊜⋕⊸IsDigit
 
 PReq ← ⊜(⊃↙↘2 GetNumbers)⊸≠ @\n
 PP   ← =@# ≡°□ ↘1 ⊜□⊸≠@\n

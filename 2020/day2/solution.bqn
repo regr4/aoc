@@ -9,13 +9,13 @@ P ← {
 }
 
 S1 ← {
-  ⟨range, chr, password⟩ ← 𝕩
+  𝕊 ⟨range, chr, password⟩ :
   range +↩ ↕≠range
   ≠´ range ≤ +´ chr=password
 }
 
 S2 ← {
-  ⟨indices, chr, password⟩ ← 𝕩
+  𝕊 ⟨indices, chr, password⟩ :
   ≠´ chr=(indices-1) ⊏ password
 }
 

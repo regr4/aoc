@@ -4,14 +4,13 @@ Split ← ((⊢-˜¬×+`)∘=⊔⊢)
 
 P ← {
   ⟨range, ⟨chr, ·⟩, password⟩ ← ' 'Split𝕩
-  nums ← •BQN¨ '-'Split range # wanted •ParseFloat, but CBQN didn't like that
+  nums ← •ParseFloat¨ '-'Split range # wanted •ParseFloat, but CBQN didn't like that
   ⟨nums, chr, password⟩
 }
 
 S1 ← {
-  𝕊 ⟨range, chr, password⟩ :
-  range +↩ ↕≠range
-  ≠´ range ≤ +´ chr=password
+  𝕊 ⟨lo, hi⟩‿chr‿password :
+  (lo⊸≤ ∧ ≤⟜hi) +´ chr=password
 }
 
 S2 ← {

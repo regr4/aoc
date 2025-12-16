@@ -1,20 +1,8 @@
-# Experimental!
-IsDigit    ← ↧⊃(≤ @9) (≥ @0)
-GetNumbers ← ⊜⋕ ⊸IsDigit
+Inp ← ⊜(⊙⋕°⊂)⊸(¬⦷", ") ▽⊸≠@\n &fras "input"
 
-Inp ← :⊜(⊙⋕°⊂) ⊸(¬⦷", ") ▽⊸≠@\n &fras "input"
-
-Dirs  ← A₂
-Start ← 0_0
-# newpos newdirs ? currpos dirs turn nsteps
-Step₁ ← ⊃(⋅∘|+×⊙⊢)⊙(↻-⊸¬=@R)
-
-Part₁ ← /+⌵◌∧Step₁ Inp Dirs Start
-&p $"Part 1: _" Part₁
-
-# newposes newdirs ? currpos dirs turn nsteps
-# Step₂ ← ⊃(⋅∘|˜⊂+⊸⊙⊣×⊙⊢)⊙(↻-⊸¬=@R)
-
-# ◌∧Step₂ Inp Dirs ¤Start
-
-# /+⌵⊢▽⊸⧆
+# turns to directions
+TTD! ← ×i ⁅ₑ×iη \+ ^0 -⊸¬=@L
+# taxicab norm
+N ← +∩⌵°ℂ
+&p $"Part 1: _" N /+ ×TTD!∘ Inp
+&p $"Part 2: _" N ⊢▽⊸⧆ \+ TTD!× ˜▽ ⊙⟜(/◇⊂≡(□=0⇡)) Inp

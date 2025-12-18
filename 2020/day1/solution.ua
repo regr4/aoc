@@ -1,9 +1,9 @@
 # Experimental!
-IsDigit    ← ↧⊃(≤ @9) (≥ @0)
-GetNumbers ← ⊜⋕ ⊸IsDigit
+IsDigit    ← ×⊃(≤@9|≥@0)
+GetNumbers ← ⊜⋕⊸IsDigit
+Inp        ← GetNumbers &fras "input"
 
-Inp ← GetNumbers &fras "input"
-Inp
+S ← /×⊢▽⊸≡(=2020/+)
 
-&p $"Part 1: _" /×⊢▽⊸≡(=2020/+)/⊂˙⊞(⊂) Inp
-&p $"Part 2: _" /×⊢▽⊸≡(=2020/+)/⊂/⊂˙⊞(⊂⊂)
+&p $"Part 1: _" S♭₂˙⊞⊟₂ Inp
+&p $"Part 2: _" S♭₂˙⊞⊟₃ Inp

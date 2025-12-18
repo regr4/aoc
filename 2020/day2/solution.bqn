@@ -4,7 +4,7 @@ Split ← ((⊢-˜¬×+`)∘=⊔⊢)
 
 P ← {
   ⟨range, ⟨chr, ·⟩, password⟩ ← ' 'Split𝕩
-  nums ← •ParseFloat¨ '-'Split range # wanted •ParseFloat, but CBQN didn't like that
+  nums ← •ParseFloat¨ '-'Split range
   ⟨nums, chr, password⟩
 }
 
@@ -14,8 +14,8 @@ S1 ← {
 }
 
 S2 ← {
-  𝕊 ⟨indices, chr, password⟩ :
+  𝕊 indices‿chr‿password :
   ≠´ chr=(indices-1) ⊏ password
 }
 
-•Show +´ ((S1⋈S2)∘P)¨ inp
+•Show +´ ((S1⋈S2) P)¨ inp
